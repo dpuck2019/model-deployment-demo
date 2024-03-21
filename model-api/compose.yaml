@@ -1,0 +1,10 @@
+services:
+  api:
+    build: application
+  nginx:
+    container_name: nginx
+    build: nginx
+    ports:
+      - 1313:1313
+    depends_on:
+      - api
